@@ -12,84 +12,13 @@ import Store from "@/components/Store";
 import Features from "@/components/Features";
 import { Vortex } from "@/components/ui/vortex";
 import { Spotlight } from "@/components/ui/Spotlight";
+import Works from "@/components/Works";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { InfiniteMovingCardsDemo } from "@/components/Testinomials";
 
 export default function Home() {
 
-  const features = [
-    {
-      icon: <Upload className="w-8 h-8 text-indigo-500" />,
-      title: "Universal Import",
-      description: "Import content from any source - URLs, PDFs, documents, tweets, or YouTube videos."
-    },
-    {
-      icon: <MessageSquare className="w-8 h-8 text-blue-500" />,
-      title: "AI Chat Interface",
-      description: "Chat naturally with your knowledge base. Ask questions and get insights."
-    },
-    {
-      icon: <BookmarkCheck className="w-8 h-8 text-purple-500" />,
-      title: "Smart Organization",
-      description: "Automatically categorize and tag your content for easy retrieval."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: "Quick Actions",
-      description: "Generate summaries and extract key points with one click."
-    },
-    {
-      icon: <Lock className="w-8 h-8 text-green-500" />,
-      title: "Secure Storage",
-      description: "Your data is encrypted and securely stored with granular permissions."
-    },
-    {
-      icon: <Sparkles className="w-8 h-8 text-pink-500" />,
-      title: "Smart Connections",
-      description: "Discover AI-powered relationships between your content."
-    }
-  ];
-
-  const steps = [
-    {
-      number: "1",
-      title: "Add Your Content",
-      description: "Import any type of content - paste URLs, upload documents, or add notes directly.",
-      tags: ["URLs", "PDFs", "Notes"]
-    },
-    {
-      number: "2",
-      title: "AI Processing",
-      description: "Our AI automatically analyzes, indexes, and connects your content.",
-      tags: ["Analysis", "Indexing", "Summaries"]
-    },
-    {
-      number: "3",
-      title: "Chat & Discover",
-      description: "Ask questions and explore your knowledge base through natural conversation.",
-      tags: ["Chat", "Search", "Insights"]
-    }
-  ];
-
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Content Creator",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&auto=format&fit=crop",
-      content: "Brainly has transformed how I organize my research and content ideas. The AI-powered insights have helped me discover connections I would have never found otherwise."
-    },
-    {
-      name: "Michael Chen",
-      role: "Software Engineer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop",
-      content: "As a developer, I need to keep track of countless articles, documentation, and code snippets. Brainly makes it effortless to store and retrieve everything I need."
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Digital Marketing Manager",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop",
-      content: "The ability to save and organize social media content has been game-changing for our marketing strategy. Brainly is like having a personal AI assistant."
-    }
-  ];
+ 
 
   const footerLinks = {
     product: [
@@ -121,7 +50,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Spotlight
-        className="-top-40 left-0 md:-top-20 md:left-60 fixed"
+        className="-top-40 left-0 md:-top-20 md:left-60"
         fill="gray"
       />
       <Navbar />
@@ -136,55 +65,12 @@ export default function Home() {
 
 
       {/* How It Works Section */}
-      <Vortex>
-        <div className="mx-auto px-4 py-20 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-4">How Brainly AI Works</h2>
-            <p className="text-xl text-muted-foreground">Three simple steps to your personalized AI knowledge assistant</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                className="text-center"
-              >
-                <div className="relative mb-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                    <span className="text-2xl font-bold text-primary">{step.number}</span>
-                  </div>
-                  {index < steps.length - 1 && (
-                    <div className="absolute top-8 left-1/2 w-full h-0.5 bg-border" />
-                  )}
-                </div>
-                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-                <p className="text-muted-foreground mb-4">{step.description}</p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {step.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-3 py-1 bg-primary/10 rounded-full text-sm text-primary"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </Vortex>
+      <Works/>
 
 
       {/* Testimonials Section */}
-      <div className="py-24 bg-muted/30">
+      <InfiniteMovingCardsDemo/>
+      {/* <div className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -227,7 +113,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Contact Section */}
       <div className="py-24 bg-background">

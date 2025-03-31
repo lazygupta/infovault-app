@@ -102,9 +102,6 @@ export const Vortex = (props: VortexProps) => {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = backgroundColor;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
     drawParticles(ctx);
     renderGlow(canvas, ctx);
     renderToScreen(canvas, ctx);
