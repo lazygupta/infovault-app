@@ -51,7 +51,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Spotlight
         className="-top-40 left-0 md:-top-20 md:left-60"
-        fill="gray"
+        fill="purple"
       />
       <Navbar />
 
@@ -63,57 +63,11 @@ export default function Home() {
       {/* Features Section */}
       <Features />
 
-
       {/* How It Works Section */}
       <Works/>
 
-
       {/* Testimonials Section */}
       <InfiniteMovingCardsDemo/>
-      {/* <div className="py-24 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-4">What Our Users Say</h2>
-            <p className="text-xl text-muted-foreground">
-              Join thousands of professionals who trust Brainly
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-              >
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 hover:border-primary/50 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">{testimonial.name}</h4>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground italic">&ldquo;{testimonial.content}&rdquo;</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div> */}
 
       {/* Contact Section */}
       <div className="py-24 bg-background">
@@ -143,7 +97,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Email</h4>
-                  <p className="text-muted-foreground">contact@brainly.ai</p>
+                  <p className="text-muted-foreground">contact@lazyrabbit.space</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">

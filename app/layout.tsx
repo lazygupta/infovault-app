@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Brainly - Your Second Brain',
+  title: 'Infovault - Your Second Brain',
   description: 'Store, organize, and retrieve your digital memories with AI-powered knowledge management',
 };
 
