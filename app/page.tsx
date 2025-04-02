@@ -13,9 +13,6 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-
-
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Spotlight
@@ -45,7 +42,7 @@ export default function Home() {
       <Footer/>
 
       {/* Floating Elements */}
-      <motion.div
+      {/* <motion.div
         animate={{
           y: [0, -20, 0],
         }}
@@ -70,7 +67,7 @@ export default function Home() {
         className="fixed bottom-40 left-20 opacity-10"
       >
         <Brain className="w-24 h-24" />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }
