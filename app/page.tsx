@@ -2,18 +2,12 @@
 
 import { motion } from "motion/react"
 import { Brain, Youtube, Twitter, Upload, MessageSquare, BookmarkCheck, Zap, Lock, Sparkles, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Store from "@/components/Store";
 import Features from "@/components/Features";
-import { Vortex } from "@/components/ui/vortex";
 import { Spotlight } from "@/components/ui/Spotlight";
 import Works from "@/components/Works";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { InfiniteMovingCardsDemo } from "@/components/Testinomials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
